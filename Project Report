@@ -1,0 +1,72 @@
+Project Report: House Price Prediction Using Linear and Polynomial Regression
+
+1. Introduction
+Predicting house prices is a fundamental problem in real estate and economics. This project aims to build predictive models using Linear Regression and Polynomial Regression to estimate house prices based on various features such as crime rate, number of rooms, tax rates, and other socioeconomic factors. The dataset used for this study is a structured housing dataset containing multiple features affecting house prices.
+
+2. Dataset Description
+The dataset consists of multiple features that influence housing prices. The features and the target variable are:
+
+CRIM: Crime rate per capita
+
+ZN: Proportion of residential land zoned for large lots
+
+INDUS: Proportion of non-retail business acres per town
+
+CHAS: Charles River dummy variable (1 if tract bounds river, 0 otherwise)
+
+NOX: Nitrogen oxide concentration
+
+RM: Average number of rooms per dwelling
+
+AGE: Proportion of owner-occupied units built before 1940
+
+DIS: Weighted distances to employment centers
+
+RAD: Accessibility index to radial highways
+
+TAX: Property tax rate per $10,000
+
+PTRATIO: Pupil-teacher ratio
+
+B: Proportion of Black residents
+
+LSTAT: Percentage of lower-status population
+
+Price: Median value of owner-occupied homes (target variable)
+
+3. Methodology
+
+Data Preprocessing: The dataset is loaded and split into features (X) and the target variable (y). The dataset is then divided into training (80%) and testing (20%) subsets.
+
+Linear Regression Model: A simple linear regression model is trained using the training dataset and then evaluated on the test dataset.
+
+Polynomial Regression Model: A polynomial regression model of degree 2 is trained using a pipeline that includes polynomial feature expansion followed by linear regression.
+
+Model Evaluation: The models are evaluated using Mean Absolute Error (MAE), Mean Squared Error (MSE), and R-squared (ℝ²) score.
+
+4. Results and Discussion
+
+Linear Regression Performance:
+
+MAE: 3.19
+
+MSE: 20.52
+
+R²: 0.68
+
+Polynomial Regression (Degree=2) Performance:
+
+MAE: 2.81
+
+MSE: 15.72
+
+R²: 0.78
+
+The results indicate that polynomial regression provides a better fit than linear regression, as evidenced by the lower MAE and MSE, and the higher R² score. However, higher-degree polynomials may lead to overfitting, making generalization difficult on unseen data.
+
+5. Visualization
+A scatter plot comparing actual and predicted prices shows that polynomial regression predictions are closer to the actual values compared to linear regression.
+
+6. Conclusion
+The study demonstrates that polynomial regression outperforms linear regression for predicting house prices. Future work could include hyperparameter tuning, incorporating feature engineering, or using advanced machine learning models like decision trees or neural networks to further enhance predictive performance.
+
